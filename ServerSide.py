@@ -72,7 +72,7 @@ def handle_udp_requests(udp_socket, message, client_address):
         if received_magic_cookie != MAGIC_COOKIE or received_message_type != REQUEST_MESSAGE_TYPE:
             return
 
-        chunk_size = UDP_PAYLOAD_SIZE - 21  # Max payload per UDP packet
+        chunk_size = UDP_PAYLOAD_SIZE - 21  # Max payload
         total_segments = (requested_file_size + chunk_size - 1) // chunk_size  # ceil division
         bytes_sent = 0
         while bytes_sent < requested_file_size:

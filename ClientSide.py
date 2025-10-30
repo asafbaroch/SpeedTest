@@ -93,7 +93,6 @@ def SpeedTest(file_size, tcp_connections, udp_connections, udp_port, tcp_port, s
 
     print(f"\n{ac.GREEN}Speed test completed.{ac.RESET}")
 
-
 # Function to download a file via TCP
 def TCP_download(file_size, tcp_port, server_address, connection_id):
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as tcp_client_socket:
